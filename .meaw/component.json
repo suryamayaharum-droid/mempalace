@@ -1,0 +1,28 @@
+{
+  "schema": "meaw.component/v1",
+  "name": "mempalace",
+  "repository": "suryamayaharum-droid/mempalace",
+  "role": "memory-backend",
+  "capabilities": [
+    "memory-mine",
+    "memory-search",
+    "memory-status",
+    "mcp-memory"
+  ],
+  "interfaces": {
+    "cli": "mempalace",
+    "mcp": ["python", "-m", "mempalace.mcp_server"]
+  },
+  "memory": {
+    "mode": "native",
+    "backend": "mempalace"
+  },
+  "health": [
+    {"type": "command", "argv": ["mempalace", "status"]}
+  ],
+  "metadata": {
+    "ecosystem": "MEAW",
+    "integration": "optional-adapter",
+    "discovery_executes_commands": false
+  }
+}
