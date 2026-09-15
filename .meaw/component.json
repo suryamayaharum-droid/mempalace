@@ -2,10 +2,12 @@
   "schema": "meaw.component/v1",
   "name": "mempalace",
   "repository": "suryamayaharum-droid/mempalace",
-  "role": "memory-backend",
+  "role": "semantic-memory-backend",
   "capabilities": [
+    "memory-index",
     "memory-mine",
     "memory-search",
+    "memory-semantic-search",
     "memory-status",
     "mcp-memory"
   ],
@@ -14,15 +16,20 @@
     "mcp": ["python", "-m", "mempalace.mcp_server"]
   },
   "memory": {
-    "mode": "native",
-    "backend": "mempalace"
+    "mode": "index",
+    "backend": "mempalace",
+    "authority": false
   },
   "health": [
     {"type": "command", "argv": ["mempalace", "status"]}
   ],
+  "lifecycle": "active",
+  "trust": "owned-fork",
+  "priority": 90,
   "metadata": {
     "ecosystem": "MEAW",
     "integration": "optional-adapter",
+    "source_of_truth": "saraswati-hive-mind/memory-castle",
     "discovery_executes_commands": false
   }
 }
