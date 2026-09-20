@@ -1,0 +1,26 @@
+{
+  "schema": "meaw.federation-link/v1",
+  "organism": "HARUM-MEAW",
+  "component": "mempalace",
+  "repository": "suryamayaharum-droid/mempalace",
+  "role": "semantic-memory-index",
+  "organ": "hippocampus-index",
+  "capabilities": [
+    "memory-index",
+    "memory-search",
+    "semantic-retrieval",
+    "mcp-memory"
+  ],
+  "lifecycle": "active",
+  "trust": "owned-fork",
+  "authority": "suryamayaharum-droid/SARASWATI-HIVE-MIND",
+  "authority_manifest": "ecosystem/repository_organism.json",
+  "nervous_system": "suryamayaharum-droid/ai23",
+  "memory_authority": "MemoryCastle@suryamayaharum-droid/SARASWATI-HIVE-MIND",
+  "policy": {
+    "discovery_executes_commands": false,
+    "manifest_grants_execution": false,
+    "explicit_adapter_required": true,
+    "secrets_allowed": false
+  }
+}
